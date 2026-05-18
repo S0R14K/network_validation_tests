@@ -1,0 +1,11 @@
+services:
+  network-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: network-tests:latest
+    container_name: network-tests
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    network_mode: host
